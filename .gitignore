@@ -1,0 +1,15 @@
+# Folders
+.tmp_versions
+.vscode
+
+# Post build files
+*.ko
+*.mod.c
+*.mod.o
+*.o
+*.symvers
+*.order
+.cache.mk
+*.o.cmd
+*.ko.cmd
+*.mod
