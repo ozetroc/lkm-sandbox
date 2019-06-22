@@ -12,7 +12,13 @@ sudo apt-get install linux-headers-$(uname -r)
 ## Usage
 ```cd``` to each module directory and run ```make```
 
-Good way to observe kernel log is:
+To clean output files use ```make clean```
+
+To load module into the kernel use ```sudo make load```
+
+To unload module from the kernel use ```sudo make unload```
+
+Good method to observe kernel log in real time is following:
 ```bash
 dmesg -wH
 ```
