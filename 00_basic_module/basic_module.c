@@ -29,7 +29,7 @@ MODULE_PARM_DESC(text, "The text displayed in kernel log");
  * @brief Init function
  */
 static int __init basic_module_init(void){
-   printk(KERN_INFO "basic_module: Hello %s from the kernel site!\n", text);
+   printk(KERN_INFO "basic_module: Hello %s from the kernel side!\n", text);
    return 0;
 }
 
@@ -37,7 +37,7 @@ static int __init basic_module_init(void){
  * @brief Exit function
  */
 static void __exit basic_module_exit(void){
-   printk(KERN_INFO "basic_module: Goodbye %s from the kernel site!\n", text);
+   printk(KERN_INFO "basic_module: Goodbye %s from the kernel side!\n", text);
 }
 
 /**

@@ -8,6 +8,16 @@ Install kernel headers for your kernel version if they are missing in ```/usr/sr
 sudo apt-get install linux-headers-$(uname -r)
 ```
 
+If gcc is not installed
+```bash
+sudo apt install gcc
+```
+
+If make is not installed
+```bash
+sudo apt install make
+```
+
 
 ## Usage
 ```cd``` to each module directory and run ```make```
@@ -24,9 +34,19 @@ dmesg -wH
 ```
 
 ## List of modules
-* 0_basic_module
+* 00_basic_module
    * initialization of basic module
    * usage of printk function
+* 01_basic_tasklet
+* 02_basic_sleep
+* 03_basic_timers
+   * improved kernel timer api [8]
+* 04_basic_char
+* 05_char_ioctl
+* 06_char_sysfs
+* 07_timers_conf
+   * improved kernel timer api [8]
+
 
 ## Sources
 [1] [Linux Device Drivers, Third Edition, O’Reilly](https://www.oreilly.com/openbook/linuxdrive3/book/)
@@ -43,10 +63,15 @@ dmesg -wH
 
 [7] [LINUX KERNEL DEVELOPMENT – CREATING A PROC FILE AND INTERFACING WITH USER SPACE](https://devarea.com/linux-kernel-development-creating-a-proc-file-and-interfacing-with-user-space/)
 
+[8] [Improving the kernel timers API](https://lwn.net/Articles/735887/)
+
 ## Tips
 * Add linux kernel include folders to Visual Studio Code. Paste following into c_cpp_properties.json file in section includePath. Adjust your kernel version.
 ```json
-"/usr/src/linux-headers-4.15.0-52-generic/include/*",
-"/usr/src/linux-headers-4.15.0-52-generic/include/linux/*"
+"${workspaceFolder}/**",
+"/usr/src/linux-headers-5.0.0-29-generic/*",
+"/usr/src/linux-headers-5.0.0-29-generic/include/*",
+"/usr/src/linux-headers-5.0.0-29-generic/include/linux/*",
+"/usr/src/linux-headers-5.0.0-29-generic/include/asm-generic/*"
 ```
 
