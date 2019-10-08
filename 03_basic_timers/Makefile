@@ -1,4 +1,4 @@
-TARGET_MODULE := basic_timer
+TARGET_MODULE := basic_timers
 obj-m += $(TARGET_MODULE).o
 
 all:

@@ -39,8 +39,15 @@ dmesg -wH
    * usage of printk function
 * 01_basic_tasklet
 * 02_basic_sleep
+   * usage of workqueue
+   * schedulink works and delayed works
+   * one callback for both types of work
+   * msleep used for delay in callback
+   * developed way to distinguish which type of work started callback
+   * added counting semaphore to clean module when no callbacks are active
 * 03_basic_timers
    * improved kernel timer api [8]
+   * regular and high resolution timer configuration with callbacks
 * 04_basic_char
 * 05_char_ioctl
 * 06_char_sysfs
